@@ -61,3 +61,66 @@ int main() {
 
 <img width="1358" height="719" alt="image" src="https://github.com/user-attachments/assets/31657dc9-1158-4efe-92d8-bcda22939213" />
 
+
+<img width="1134" height="730" alt="image" src="https://github.com/user-attachments/assets/aaca902b-9ae8-4942-89d0-b6ea0f60b6dc" />
+
+
+```cpp
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+#include <cassert>
+using namespace std;
+
+// Write your Student class here
+
+class Student {
+private:
+    int scores[5];
+
+public:
+    void input() {
+        for (int i = 0; i < 5; i++) {
+            cin >> scores[i];
+        }
+    }
+
+    int calculateTotalScore() {
+        int total = 0;
+        for (int i = 0; i < 5; i++) {
+            total += scores[i];
+        }
+        return total;
+    }
+};
+
+int main() {
+    int n; // number of students
+    cin >> n;
+    Student *s = new Student[n]; // an array of n students
+    
+    for(int i = 0; i < n; i++){
+        s[i].input();
+    }
+
+    // calculate kristen's score
+    int kristen_score = s[0].calculateTotalScore();
+
+    // determine how many students scored higher than kristen
+    int count = 0; 
+    for(int i = 1; i < n; i++){
+        int total = s[i].calculateTotalScore();
+        if(total > kristen_score){
+            count++;
+        }
+    }
+
+    // print result
+    cout << count;
+    
+    return 0;
+}
+```
+
