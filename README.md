@@ -57,3 +57,7 @@ int main() {
     
     return 0;
 }
+
+
+<img width="1358" height="719" alt="image" src="https://github.com/user-attachments/assets/31657dc9-1158-4efe-92d8-bcda22939213" />
+
